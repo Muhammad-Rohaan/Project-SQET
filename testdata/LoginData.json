@@ -1,0 +1,22 @@
+{
+    "validUsers": [
+        {
+            "email": "abbas@google.com",
+            "password": "admin"
+        },
+        {
+            "email": "recp@gmail.com",
+            "password": "r123"
+        },
+        {
+            "email": "rohaanali82005@gmail.com",
+            "password": "r123"
+        }
+    ],
+    "invalidUsers": [
+        {
+            "email": "test@invalid.pk",
+            "password": "invalid"
+        }
+    ]
+}
