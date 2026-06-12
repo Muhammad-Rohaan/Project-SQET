@@ -2,7 +2,8 @@
     "validUsers": [
         {
             "email": "abbas@google.com",
-            "password": "admin"
+            "password": "admin",
+            "expectedMsg": "Welcome, Abbas!"
         },
         {
             "email": "recp@gmail.com",
