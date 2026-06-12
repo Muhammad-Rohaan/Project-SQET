@@ -1,53 +1,34 @@
 {
-    "validTeacher": [
-        {
-            "fullName": "Usman Khan",
-            "email": "usman@az.pk",
-            "password": "u123",
-            "teacherRegId": "UK01",
-            "cnic": "42101-1234567-3",
-            "qualification": "Master of Computer Science (MCS)",
-            "salary": "75000",
-            "date": "06/12/2026",
-            "subjects": "Mathematics, Computer Science, Physics",
-            "classes": "9, 10, 11",
-            "contact": "03001234567",
-            "address": "123 layari, Sector F-10, Islamabad",
-            "age": "30"
-        }
-    ],
-    "missingMandatoryFields": {
-        "fullName": "",
-        "email": "",
-        "password": "Short",
-        "teacherRegId": "",
-        "cnic": "",
-        "qualification": "",
-        "salary": "",
-        "date": "",
-        "subjects": "",
-        "classes": "",
-        "contact": "",
-        "address": "",
-        "age": ""
+    "validTeacher": {
+        "fullName": "Usman Khan",
+        "email": "usman@az.pk",
+        "password": "u123",
+        "teacherRegId": "UK01",
+        "cnic": "42101-1234567-3",
+        "qualification": "Master of Computer Science (MCS)",
+        "salary": "75000",
+        "date": "2026-06-12",
+        "subjects": "Mathematics, Computer Science, Physics",
+        "classes": "9, 10, 11",
+        "contact": "03001234567",
+        "address": "123 layari, Sector F-10, Islamabad",
+        "age": "30"
     },
-    "invalidFormats": {
-        "badEmail": {
-            "email": "sarah.jenkins@school"
-        },
-        "badCnicPattern": {
-            "cnic": "4210112345673"
-        },
-        "badRegIdPattern": {
-            "teacherRegId": "12345"
-        }
+    "validReceptionist": {
+        "receptionistFullName": "Tahami",
+        "email": "tahami@az.pk",
+        "password": "r123",
+        "receptionRegId": "1",
+        "cnic": "42101-8666739-5",
+        "salary": "9000",
+        "joiningDate": "2026-03-13",
+        "contact": "03446441224",
+        "address": "Mars"
     },
-    "invalidDataTypes": {
-        "stringInSalary": {
-            "salary": "Seventy Thousand"
-        },
-        "invalidAge": {
-            "age": "15"
-        }
+    "validAnnouncement": {
+        "title": "War",
+        "message": "online class",
+        "target": "specific-class",
+        "className": "9"
     }
 }
