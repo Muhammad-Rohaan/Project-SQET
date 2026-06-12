@@ -22,13 +22,9 @@
         }
     ],
     "invalidUsers": [
-        {
-            "email": "test@invalid.pk",
-            "password": "invalid"
-        },
-        {
-            "email": "",
-            "password": ""
-        }
+        { "email": "test@invalid.pk", "password": "invalid" },
+        { "email": "", "password": "" },
+        { "email": "invalid-email", "password": "test123" },
+        { "email": "abbas@google.com", "password": "wrongpass" }
     ]
 }

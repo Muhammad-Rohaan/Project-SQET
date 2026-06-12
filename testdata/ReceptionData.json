@@ -1,0 +1,14 @@
+{
+    "validActions": [
+        { "action": "navigate to dashboard", "index": 1 },
+        { "action": "navigate to az students", "index": 2 },
+        { "action": "navigate to fees", "index": 3 },
+        { "action": "navigate to attendance", "index": 4 }
+    ],
+    "invalidActions": [
+        { "action": "refresh page", "index": 1 },
+        { "action": "refresh page", "index": 2 },
+        { "action": "refresh page", "index": 3 },
+        { "action": "refresh page", "index": 4 }
+    ]
+}

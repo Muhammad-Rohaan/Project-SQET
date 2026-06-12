@@ -1,0 +1,14 @@
+{
+    "validActions": [
+        { "action": "navigate to dashboard", "index": 1 },
+        { "action": "navigate to students", "index": 2 },
+        { "action": "navigate to results", "index": 3 },
+        { "action": "navigate to password", "index": 4 }
+    ],
+    "invalidActions": [
+        { "action": "refresh page", "index": 1 },
+        { "action": "refresh page", "index": 2 },
+        { "action": "refresh page", "index": 3 },
+        { "action": "refresh page", "index": 4 }
+    ]
+}
