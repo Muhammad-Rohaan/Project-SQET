@@ -1,45 +1,25 @@
+import { expect } from "@playwright/test";
+
 class AdminPage {
 
     constructor(page) {
         this.page = page;
-        this.addTeacherBtn = page.getByLabel('Add new Teacher');
-        this.fullNameInput = page.getByLabel('Full Name');
-        this.emailInput = page.getByLabel('Email Address');
-        this.passwordInput = page.getByLabel('Password');
-        this.teacherRegIdInput = page.getByLabel('Teacher Registration ID');
-        this.cnicInput = page.getByLabel('CNIC Number');
-        this.qualificationInput = page.getByLabel('Qualification');
-        this.salaryInput = page.getByLabel('Monthly Salary');
-        this.joiningDateInput = page.getByLabel('Joining Date');
-        this.subjectsInput = page.getByLabel('Subjects');
-        this.classesInput = page.getByLabel('Classes');
-        this.contactInput = page.getByLabel('Contact Number');
-        this.addressInput = page.getByLabel('Home Address');
-        this.ageInput = page.getByLabel('Age');
-        this.registerBtn = page.getByRole('button', { name: 'Register Teacher' });
-        this.cancelBtn = page.getByRole('button', { name: 'Cancel' });
+        this.sidebarDashboard = page.getByRole('link', { name: 'Dashboard' }).first();
+        this.sidebarStudents = page.getByRole('link', { name: 'Students' }).first();
+        this.sidebarTeachers = page.getByRole('link', { name: 'Teachers' }).first();
+        this.sidebarReceptionists = page.getByRole('link', { name: 'Receptionists' }).first();
+        this.sidebarFinanceFees = page.getByRole('link', { name: 'Finance/Fees' }).first();
+        this.sidebarAnnouncements = page.getByRole('link', { name: 'Announcements' }).first();
     }
 
-    async registerTeacher(teacherData) {
-        await this.addTeacherBtn.click();
-        await this.fullNameInput.fill(teacherData.fullName);
-        await this.emailInput.fill(teacherData.email);
-        await this.passwordInput.fill(teacherData.password);
-        await this.teacherRegIdInput.fill(teacherData.teacherRegId);
-        await this.cnicInput.fill(teacherData.cnic);
-        await this.qualificationInput.fill(teacherData.qualification);
-        await this.salaryInput.fill(teacherData.salary);
-        await this.joiningDateInput.fill(teacherData.joiningDate);
-        await this.subjectsInput.fill(teacherData.subjects);
-        await this.classesInput.fill(teacherData.classes);
-        await this.contactInput.fill(teacherData.contact);
-        await this.addressInput.fill(teacherData.address);
-        await this.ageInput.fill(teacherData.age);
-        await this.registerBtn.click();
-
+    async gotoAdminDashboard() {
+        await this.page.goto('http://localhost:5173/');
+        await this.page.getByRole('link', { name: 'Launch Portal' }).click();
+        await this.page.getByLabel('Email or ID').fill('abbas@google.com');
+        await this.page.getByLabel('Password').fill('admin');
+        await this.page.locator('#submitBtn').click();
+        await this.page.waitForTimeout(3000); // Wait for dashboard to load
     }
-
-
-
 
 }
+export default AdminPage;

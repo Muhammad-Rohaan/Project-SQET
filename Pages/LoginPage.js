@@ -23,7 +23,9 @@ class LoginPage {
         await this.email.fill(email);
         await this.password.fill(password);
         await this.submitBtn.click();
-        await expect(this.expectedMsg).toHaveText(expectedMsg);
+        if (expectedMsg) {
+            await expect(this.expectedMsg).toHaveText(expectedMsg);
+        }
     }
 
 
