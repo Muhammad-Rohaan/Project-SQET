@@ -1,6 +1,6 @@
-import LoginPage from "./LoginPage";
+import { expect } from "@playwright/test";
+import LoginPage from "./LoginPage.js";
 import LoginData from "../testdata/LoginData.json";
-
 
 
 class AdminPage {
@@ -61,12 +61,21 @@ class AdminPage {
 
     }
 
-    async registerTeacher(teacherData) {
-        // Login first
+    async loginForAdmin(idx) {
+        
         const loginPage = new LoginPage(this.page);
-        const loginData = LoginData.validUsers[0]; // for admin because only admin can create Teacher
+        const loginData = LoginData.validUsers[idx]; // for admin because only admin can create Teacher
         await loginPage.gotoUrl();
         await loginPage.login(loginData.email, loginData.password, loginData.expectedMsg);
+    }
+
+    async registerTeacher(teacherData) {
+        // Login first
+        // const loginPage = new LoginPage(this.page);
+        // const loginData = LoginData.validUsers[0]; // for admin because only admin can create Teacher
+        // await loginPage.gotoUrl();
+        // await loginPage.login(loginData.email, loginData.password, loginData.expectedMsg);
+       // await this.loginForAdmin(0);
 
         // Form Navigation & Interaction
         await this.navigateToDashboard.click();
@@ -89,11 +98,11 @@ class AdminPage {
     }
 
     async registerReceptionist(receptionistData) {
-        // Login first
-        const loginPage = new LoginPage(this.page);
-        const loginData = LoginData.validUsers[0]; // for admin because only admin can create Receptionist
-        await loginPage.gotoUrl();
-        await loginPage.login(loginData.email, loginData.password, loginData.expectedMsg);
+        // // Login first
+        // const loginPage = new LoginPage(this.page);
+        // const loginData = LoginData.validUsers[0]; // for admin because only admin can create Receptionist
+        // await loginPage.gotoUrl();
+        // await loginPage.login(loginData.email, loginData.password, loginData.expectedMsg);
         // Form Navigation & Interaction
         await this.navigateToDashboard.click();
         await this.addReceptionistBtn.click();
@@ -107,11 +116,11 @@ class AdminPage {
     }
 
     async postAnnouncement(announcementData) {
-        // Login first
-        const loginPage = new LoginPage(this.page);
-        const loginData = LoginData.validUsers[0]; // for admin because only admin can create Receptionist
-        await loginPage.gotoUrl();
-        await loginPage.login(loginData.email, loginData.password, loginData.expectedMsg);
+        // // Login first
+        // const loginPage = new LoginPage(this.page);
+        // const loginData = LoginData.validUsers[0]; // for admin because only admin can create Receptionist
+        // await loginPage.gotoUrl();
+        // await loginPage.login(loginData.email, loginData.password, loginData.expectedMsg);
 
         await this.postAnnouncementModalBtn.click();
         await this.announcementTitleInput.fill(announcementData.title);

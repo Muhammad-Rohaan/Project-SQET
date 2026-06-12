@@ -53,3 +53,21 @@ test('TC05 - Verify Login Page load and visibility', async ({ page }) => {
     await loginPage.gotoUrl();
     await expect(page).toHaveURL(/.*login/i);
 });
+
+test('TC06: Verify email input field exists', async ({ page }) => {
+    const loginPage = new LoginPage(page);
+    await loginPage.gotoUrl();
+    await expect(loginPage.email).toBeVisible();
+});
+
+test('TC07: Verify password input field exists', async ({ page }) => {
+    const loginPage = new LoginPage(page);
+    await loginPage.gotoUrl();
+    await expect(loginPage.password).toBeVisible();
+});
+
+test('TC08: Verify submit button exists', async ({ page }) => {
+    const loginPage = new LoginPage(page);
+    await loginPage.gotoUrl();
+    await expect(loginPage.submitBtn).toBeVisible();
+});

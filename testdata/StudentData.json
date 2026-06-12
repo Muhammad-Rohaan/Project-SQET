@@ -1,14 +1,7 @@
 {
-    "validActions": [
-        { "action": "navigate to dashboard", "index": 1 },
-        { "action": "navigate to password", "index": 2 },
-        { "action": "navigate to dashboard", "index": 3 },
-        { "action": "navigate to password", "index": 4 }
-    ],
-    "invalidActions": [
-        { "action": "refresh page", "index": 1 },
-        { "action": "refresh page", "index": 2 },
-        { "action": "refresh page", "index": 3 },
-        { "action": "refresh page", "index": 4 }
-    ]
+    "validPasswordChange": {
+        "oldPassword": "a123",
+        "newPassword": "newpass123",
+        "confirmPassword": "newpass123"
+    }
 }

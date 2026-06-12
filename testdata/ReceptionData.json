@@ -1,14 +1,24 @@
 {
-    "validActions": [
-        { "action": "navigate to dashboard", "index": 1 },
-        { "action": "navigate to az students", "index": 2 },
-        { "action": "navigate to fees", "index": 3 },
-        { "action": "navigate to attendance", "index": 4 }
-    ],
-    "invalidActions": [
-        { "action": "refresh page", "index": 1 },
-        { "action": "refresh page", "index": 2 },
-        { "action": "refresh page", "index": 3 },
-        { "action": "refresh page", "index": 4 }
-    ]
+    "validStudent": {
+        "fullName": "Test Student",
+        "email": "test.student@example.com",
+        "password": "password123",
+        "fatherName": "Test Father",
+        "fatherPhone": "03001234567",
+        "contact": "03123456789",
+        "address": "123 Test Street",
+        "age": "15",
+        "className": "10",
+        "field": "cs"
+    },
+    "validFee": {
+        "rollNo": "10A-01",
+        "month": "June",
+        "year": "2024",
+        "amount": "5000"
+    },
+    "validAttendance": {
+        "rollNo": "10A-01",
+        "status": "present"
+    }
 }
