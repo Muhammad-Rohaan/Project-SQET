@@ -23,5 +23,41 @@ test('TC#3 - Validating posting announcement | Positive', async ({page}) => {
     const adminDataForAnnouncement = AdminData.validAnnouncement;
 
     await adminPage.postAnnouncement(adminDataForAnnouncement);
-    
+});
+
+test('TC#4 - Validating teacher registration cancellation | Positive', async ({page}) => {
+    const adminPage = new AdminPage(page);
+
+    await adminPage.addTeacherBtn.click();
+    await adminPage.cancelBtn.click();
+    await expect(adminPage.addTeacherBtn).toBeVisible();
+});
+
+test('TC#5 - Validating announcement posting with empty fields | Negative', async ({page}) => {
+    const adminPage = new AdminPage(page);
+
+    await adminPage.postAnnouncementModalBtn.click();
+    await adminPage.postBtn.click();
+});
+
+test('TC#6 - Validating receptionist registration cancellation | Positive', async ({page}) => {
+    const adminPage = new AdminPage(page);
+
+    await adminPage.addReceptionistBtn.click();
+    await adminPage.cancelBtn.click();
+    await expect(adminPage.addReceptionistBtn).toBeVisible();
+});
+
+test('TC#7 - Validating teacher registration with empty fields | Negative', async ({page}) => {
+    const adminPage = new AdminPage(page);
+    await adminPage.addTeacherBtn.click();
+    await adminPage.registerBtn.click();
+    await expect(adminPage.cancelBtn).toBeVisible();
+});
+
+test('TC#8 - Validating announcement posting cancellation | Positive', async ({page}) => {
+    const adminPage = new AdminPage(page);
+    await adminPage.postAnnouncementModalBtn.click();
+    await adminPage.cancelBtn.click();
+    await expect(adminPage.postAnnouncementModalBtn).toBeVisible();
 });
