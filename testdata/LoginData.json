@@ -7,17 +7,28 @@
         },
         {
             "email": "recp@gmail.com",
-            "password": "r123"
+            "password": "r123",
+            "expectedMsg": "Welcome, recp!"
         },
         {
             "email": "rohaanali82005@gmail.com",
-            "password": "r123"
+            "password": "r123",
+            "expectedMsg": "Welcome, Muhammad Rohan Ali!"
+        },
+        {
+            "email": "bscs2380246@szabist.pk",
+            "password": "a123",
+            "expectedMsg": "Welcome, Abuzar!"
         }
     ],
     "invalidUsers": [
         {
             "email": "test@invalid.pk",
             "password": "invalid"
+        },
+        {
+            "email": "",
+            "password": ""
         }
     ]
 }
