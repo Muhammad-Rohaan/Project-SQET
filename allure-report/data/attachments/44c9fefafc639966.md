@@ -1,0 +1,230 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Login.spec.js >> Login >>  TC02 - login for invalid roles invalid-email
+- Location: tests\Login.spec.js:24:13
+
+# Error details
+
+```
+ReferenceError: test is not defined
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic:
+    - img
+  - navigation "Main Navigation" [ref=e4]:
+    - generic [ref=e6]:
+      - generic [ref=e7] [cursor=pointer]:
+        - img [ref=e9]
+        - generic [ref=e11]: EduStream
+      - generic [ref=e12]:
+        - link "Features" [ref=e13] [cursor=pointer]:
+          - /url: "#features"
+        - link "Launch Portal" [active] [ref=e14] [cursor=pointer]:
+          - /url: /login
+  - main [ref=e15]:
+    - generic [ref=e18]:
+      - generic [ref=e19]:
+        - generic [ref=e20]: Academic Excellence 2026
+        - heading "Modernizing Education Hubs" [level=1] [ref=e24]:
+          - text: Modernizing
+          - text: Education Hubs
+        - paragraph [ref=e25]: The ultimate ERP ecosystem built for forward-thinking institutes. Automate, educate, and elevate with data-driven insights.
+        - generic [ref=e26]:
+          - link "Start Your Journey" [ref=e27] [cursor=pointer]:
+            - /url: /login
+            - text: Start Your Journey
+            - img [ref=e28]
+          - link "Tour Features" [ref=e30] [cursor=pointer]:
+            - /url: "#features"
+        - generic [ref=e31]:
+          - generic [ref=e32]:
+            - img "User profile" [ref=e34]
+            - img "User profile" [ref=e36]
+            - img "User profile" [ref=e38]
+            - img "User profile" [ref=e40]
+            - img "User profile" [ref=e42]
+            - generic [ref=e43]: +1k
+          - generic [ref=e44]:
+            - generic [ref=e45]:
+              - img [ref=e46]
+              - img [ref=e49]
+              - img [ref=e52]
+              - img [ref=e55]
+              - img [ref=e58]
+            - paragraph [ref=e61]: Trusted by 1,200+ global campuses
+      - generic [ref=e66]:
+        - img "Students collaborating in a modern educational space" [ref=e67]
+        - generic [ref=e69]:
+          - img [ref=e71]
+          - generic [ref=e73]:
+            - paragraph [ref=e74]: Growth Rate
+            - paragraph [ref=e75]: +85%
+        - generic [ref=e76]:
+          - generic [ref=e77]:
+            - img [ref=e78]
+            - generic [ref=e81]: AI Analytics
+          - paragraph [ref=e84]: Real-time performance tracking active
+    - generic [ref=e86]:
+      - generic [ref=e87]:
+        - generic [ref=e88]:
+          - heading "Capabilities" [level=2] [ref=e89]
+          - paragraph [ref=e90]:
+            - text: Designed for the
+            - text: Modern Classroom
+        - paragraph [ref=e91]: We've built a suite of tools that work in harmony to streamline every aspect of your institution.
+      - generic [ref=e92]:
+        - generic [ref=e93]:
+          - img [ref=e95]
+          - heading "Student Core" [level=3] [ref=e100]
+          - paragraph [ref=e101]: Comprehensive 360-degree student profiles with automated attendance and behavioral tracking.
+        - generic [ref=e102]:
+          - img [ref=e104]
+          - heading "Fiscal Flow" [level=3] [ref=e106]
+          - paragraph [ref=e107]: Next-gen fee management with automated invoicing, online payments, and deep financial auditing.
+        - generic [ref=e108]:
+          - img [ref=e110]
+          - heading "Result Engine" [level=3] [ref=e113]
+          - paragraph [ref=e114]: Dynamic result processing with visual analytics and custom report card generation.
+        - generic [ref=e115]:
+          - img [ref=e117]
+          - heading "Fortified Security" [level=3] [ref=e120]
+          - paragraph [ref=e121]: Bank-grade security protocols with granular role-based permissions for total peace of mind.
+        - generic [ref=e122]:
+          - img [ref=e124]
+          - heading "AI Quiz Master" [level=3] [ref=e126]
+          - paragraph [ref=e127]: Leverage advanced AI to generate curriculum-aligned assessments in seconds.
+        - generic [ref=e128]:
+          - img [ref=e130]
+          - heading "Pulse Comms" [level=3] [ref=e132]
+          - paragraph [ref=e133]: Integrated notification system keeping parents, students, and staff perfectly aligned.
+    - generic [ref=e139]:
+      - heading "Ready for a Digital Upgrade?" [level=2] [ref=e140]:
+        - text: Ready for a
+        - text: Digital Upgrade?
+      - paragraph [ref=e141]: Join the educational revolution. Get your campus on EduStream today and experience the difference.
+      - generic [ref=e142]:
+        - link "Get Started Free" [ref=e143] [cursor=pointer]:
+          - /url: /login
+        - button "Talk to Expert" [ref=e144] [cursor=pointer]
+  - contentinfo [ref=e145]:
+    - generic [ref=e146]:
+      - generic [ref=e147]:
+        - generic [ref=e148]:
+          - generic [ref=e149]:
+            - img [ref=e151]
+            - generic [ref=e153]: EduStream
+          - paragraph [ref=e154]: The ecosystem that empowers educators and inspires students to reach their full potential.
+          - generic [ref=e155]:
+            - img [ref=e157] [cursor=pointer]
+            - img [ref=e161] [cursor=pointer]
+            - img [ref=e164] [cursor=pointer]
+            - img [ref=e167] [cursor=pointer]
+        - generic [ref=e169]:
+          - heading "Platform" [level=4] [ref=e170]
+          - list [ref=e171]:
+            - listitem [ref=e172]:
+              - link "Core Features" [ref=e173] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e174]:
+              - link "Integrations" [ref=e175] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e176]:
+              - link "Mobile App" [ref=e177] [cursor=pointer]:
+                - /url: "#"
+        - generic [ref=e178]:
+          - heading "Company" [level=4] [ref=e179]
+          - list [ref=e180]:
+            - listitem [ref=e181]:
+              - link "Our Vision" [ref=e182] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e183]:
+              - link "Careers" [ref=e184] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e185]:
+              - link "Press Kit" [ref=e186] [cursor=pointer]:
+                - /url: "#"
+        - generic [ref=e187]:
+          - heading "Resources" [level=4] [ref=e188]
+          - list [ref=e189]:
+            - listitem [ref=e190]:
+              - link "Documentation" [ref=e191] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e192]:
+              - link "Support Center" [ref=e193] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e194]:
+              - link "Community" [ref=e195] [cursor=pointer]:
+                - /url: "#"
+      - generic [ref=e196]:
+        - paragraph [ref=e197]: © 2026 EduStream ERP. Building the future of education.
+        - generic [ref=e198]:
+          - link "Privacy" [ref=e199] [cursor=pointer]:
+            - /url: "#"
+          - link "Terms" [ref=e200] [cursor=pointer]:
+            - /url: "#"
+          - link "Cookies" [ref=e201] [cursor=pointer]:
+            - /url: "#"
+```
+
+# Test source
+
+```ts
+  1  | import { expect } from "@playwright/test";
+  2  | 
+  3  | class LoginPage {
+  4  | 
+  5  |     constructor(page) {
+  6  |         this.page = page;
+  7  |         this.gotoLogin = page.getByRole('link', { name: 'Launch Portal' });
+  8  |         this.email = page.getByLabel('Email or ID');
+  9  |         this.password = page.getByLabel('Password');
+  10 |         this.submitBtn = page.locator('#submitBtn');
+  11 |         this.expectedMsg = page.getByRole('heading', {
+  12 |             level: 2
+  13 |         });
+  14 |     }
+  15 | 
+  16 | 
+  17 |     async gotoUrl() {
+  18 |         await this.page.goto('http://localhost:5173/');
+  19 |         await this.gotoLogin.click();
+  20 |         await this.attachScreenshot('01 - Login page opened');
+  21 |     }
+  22 | 
+  23 |     async login(email, password, expectedMsg) {
+  24 |         await this.email.fill(email);
+  25 |         await this.attachScreenshot('02 - After entering Email/ ID');
+  26 |         await this.password.fill(password);
+  27 |         await this.attachScreenshot('03 - After entering password');
+  28 |         await this.submitBtn.click();
+  29 |         await this.attachScreenshot('04 - After clicking Login');
+  30 |         if (expectedMsg) {
+  31 |             await expect(this.expectedMsg).toHaveText(expectedMsg);
+  32 |         }
+  33 |     }
+  34 | 
+  35 |     async attachScreenshot(name) {
+> 36 |         await test.info().attach(name, {
+     |         ^ ReferenceError: test is not defined
+  37 |             body: await this.page.screenshot(),
+  38 |             contentType: 'image/png',
+  39 |         });
+  40 |     }
+  41 | 
+  42 | 
+  43 | 
+  44 | 
+  45 | 
+  46 | }
+  47 | export default LoginPage;
+```

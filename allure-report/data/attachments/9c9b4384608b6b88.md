@@ -1,0 +1,88 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Login.spec.js >> Login >> TC06: Verify email input field exists
+- Location: tests\Login.spec.js:58:9
+
+# Error details
+
+```
+ReferenceError: test is not defined
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e4]:
+  - generic [ref=e5]:
+    - heading "AZ Coaching" [level=1] [ref=e6]
+    - paragraph [ref=e7]: Sign in to access admin dashboard
+  - generic [ref=e8]:
+    - generic [ref=e9]:
+      - generic [ref=e10]:
+        - generic [ref=e11]: Email or ID
+        - textbox "Email or ID" [active] [ref=e12]:
+          - /placeholder: admin@example.com
+      - generic [ref=e13]:
+        - generic [ref=e14]: Password
+        - textbox "Password" [ref=e15]
+    - button "Sign In" [ref=e16] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  1  | import { expect } from "@playwright/test";
+  2  | 
+  3  | class LoginPage {
+  4  | 
+  5  |     constructor(page) {
+  6  |         this.page = page;
+  7  |         this.gotoLogin = page.getByRole('link', { name: 'Launch Portal' });
+  8  |         this.email = page.getByLabel('Email or ID');
+  9  |         this.password = page.getByLabel('Password');
+  10 |         this.submitBtn = page.locator('#submitBtn');
+  11 |         this.expectedMsg = page.getByRole('heading', {
+  12 |             level: 2
+  13 |         });
+  14 |     }
+  15 | 
+  16 | 
+  17 |     async gotoUrl() {
+  18 |         await this.page.goto('http://localhost:5173/');
+  19 |         await this.gotoLogin.click();
+  20 |         await this.attachScreenshot('01 - Login page opened');
+  21 |     }
+  22 | 
+  23 |     async login(email, password, expectedMsg) {
+  24 |         await this.email.fill(email);
+  25 |         await this.attachScreenshot('02 - After entering Email/ ID');
+  26 |         await this.password.fill(password);
+  27 |         await this.attachScreenshot('03 - After entering password');
+  28 |         await this.submitBtn.click();
+  29 |         await this.attachScreenshot('04 - After clicking Login');
+  30 |         if (expectedMsg) {
+  31 |             await expect(this.expectedMsg).toHaveText(expectedMsg);
+  32 |         }
+  33 |     }
+  34 | 
+  35 |     async attachScreenshot(name) {
+> 36 |         await test.info().attach(name, {
+     |         ^ ReferenceError: test is not defined
+  37 |             body: await this.page.screenshot(),
+  38 |             contentType: 'image/png',
+  39 |         });
+  40 |     }
+  41 | 
+  42 | 
+  43 | 
+  44 | 
+  45 | 
+  46 | }
+  47 | export default LoginPage;
+```
