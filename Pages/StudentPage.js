@@ -7,6 +7,11 @@ class StudentPage {
         this.sidebarPassword = page.getByRole('link', { name: 'Password' }).first();
 
         this.startQuizBtn = page.getByRole('button', { name: 'Start Quiz' });
+
+        // this.welcomeMsg = page.getByRole('heading', {
+        //     level: 2,
+        //     name: /Welcome,/
+        // });
     }
 
     async gotoDashboard() {

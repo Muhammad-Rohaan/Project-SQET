@@ -9,7 +9,8 @@ class LoginPage {
         this.password = page.getByLabel('Password');
         this.submitBtn = page.locator('#submitBtn');
         this.expectedMsg = page.getByRole('heading', {
-            level: 2
+            level: 2,
+            name: /Welcome,/
         });
     }
 
