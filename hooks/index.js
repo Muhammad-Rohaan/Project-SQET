@@ -26,7 +26,7 @@ export const test = base.extend({
     loginAsStudent: async ({ page }, use) => {
         const loginPage = new LoginPage(page);
         await loginPage.gotoUrl();
-        await loginPage.login('bscs2380246@szabist.pk', 'a123', 'Welcome, Abuzar!');
+        await loginPage.login('learning82005@gmail.com', 'a123', 'Welcome, Afnan!');
         await use(page);
     }
 });

@@ -7,7 +7,7 @@ class AdminPage {
 
     constructor(page) {
         this.page = page;
-        this.navigateToDashboard = page.getByLabel('Navigate to Dashboard')
+        // this.navigateToDashboard = page.getByRole('link', { name: 'Launch Portal' });
         this.addTeacherBtn = page.getByLabel('Add new Teacher');
 
         this.fullNameInput = page.getByLabel('Full Name');
@@ -50,24 +50,24 @@ class AdminPage {
             exact: true
         });
 
-        this.fullNameInput = page.getByLabel('Full Name');
-        this.emailInput = page.getByLabel('Email Address');
-        this.passwordInput = page.getByLabel('Password');
-        this.cnicInput = page.getByLabel('CNIC Number');
-        this.salaryInput = page.getByLabel('Monthly Salary');
-        this.joiningDateInput = page.getByLabel('Joining Date');
-        this.contactInput = page.getByLabel('Contact Number');
-        this.addressInput = page.getByLabel('Home Address');
+        // this.fullNameInput = page.getByLabel('Full Name');
+        // this.emailInput = page.getByLabel('Email Address');
+        // this.passwordInput = page.getByLabel('Password');
+        // this.cnicInput = page.getByLabel('CNIC Number');
+        // this.salaryInput = page.getByLabel('Monthly Salary');
+        // this.joiningDateInput = page.getByLabel('Joining Date');
+        // this.contactInput = page.getByLabel('Contact Number');
+        // this.addressInput = page.getByLabel('Home Address');
 
     }
 
-    async loginForAdmin(idx) {
+    // async loginForAdmin(idx) {
         
-        const loginPage = new LoginPage(this.page);
-        const loginData = LoginData.validUsers[idx]; // for admin because only admin can create Teacher
-        await loginPage.gotoUrl();
-        await loginPage.login(loginData.email, loginData.password, loginData.expectedMsg);
-    }
+    //     const loginPage = new LoginPage(this.page);
+    //     const loginData = LoginData.validUsers[idx]; // for admin because only admin can create Teacher
+    //     await loginPage.gotoUrl();
+    //     await loginPage.login(loginData.email, loginData.password, loginData.expectedMsg);
+    // }
 
     async registerTeacher(teacherData) {
         // Login first
@@ -78,7 +78,7 @@ class AdminPage {
        // await this.loginForAdmin(0);
 
         // Form Navigation & Interaction
-        await this.navigateToDashboard.click();
+        // await this.navigateToDashboard.click();
         await this.addTeacherBtn.click();
         await this.fullNameInput.fill(teacherData.fullName);
         await this.emailInput.fill(teacherData.email);
@@ -104,7 +104,7 @@ class AdminPage {
         // await loginPage.gotoUrl();
         // await loginPage.login(loginData.email, loginData.password, loginData.expectedMsg);
         // Form Navigation & Interaction
-        await this.navigateToDashboard.click();
+        // await this.navigateToDashboard.click();
         await this.addReceptionistBtn.click();
         await this.receptionRegIdInput.fill(receptionistData.receptionRegId);
         await this.cnicInput.fill(receptionistData.cnic);

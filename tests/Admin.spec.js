@@ -64,6 +64,6 @@ test('TC#8 - Validating announcement posting cancellation | Positive', async ({l
 
 test('TC#9: Navigate to Dashboard', async ({loginAsAdmin, page }) => {
     const adminPage = new AdminPage(page);
-    await adminPage.loginForAdmin(0);
-    await expect(page).toHaveURL(/.*admin\/dashboard/);
+    await expect(page).toHaveURL(/.*dashboard/);
+    await expect(adminPage.addTeacherBtn).toBeVisible();
 });

@@ -16,9 +16,9 @@
             "expectedMsg": "Welcome, Muhammad Rohan Ali!"
         },
         {
-            "email": "bscs2380246@szabist.pk",
+            "email": "learning82005@gmail.com",
             "password": "a123",
-            "expectedMsg": "Welcome, Abuzar!"
+            "expectedMsg": "Welcome, Afnan!"
         }
     ],
     "invalidUsers": [

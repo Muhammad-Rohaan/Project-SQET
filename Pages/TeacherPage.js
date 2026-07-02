@@ -8,7 +8,7 @@ class TeacherPage {
         this.sidebarResults = page.getByRole('link', { name: 'Results' }).first();
         this.sidebarPassword = page.getByRole('link', { name: 'Password' }).first();
         
-        this.quickViewResults = page.getByRole('link', { name: 'View Results' });
+        this.quickViewResults = page.getByRole('link', { name: 'View student results' });
         this.quickFindStudents = page.getByRole('link', { name: 'Find Students' });
         
         this.noteTitle = page.getByPlaceholder('Note Title');
